@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'vagrant/ec2_setup/version'
+require 'vagrant/ec2setup/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "vagrant-ec2_setup"
-  spec.version       = Vagrant::Ec2Setup::VERSION
+  spec.name          = "vagrant-ec2setup"
+  spec.version       = Vagrant::Ec2setup::VERSION
   spec.authors       = ["yalab"]
   spec.email         = ["rudeboyjet@gmail.com"]
   spec.description   = "Automation setup security group, ssh key on EC2."
