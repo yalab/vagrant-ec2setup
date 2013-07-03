@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 $LOAD_PATH << File.expand_path('../lib', __FILE__)
-require 'vagrant/ec2_setup'
+require 'vagrant/ec2setup'
 
 Vagrant.configure("2") do |config|
   # All Vagrant configuration is done here. The most common configuration
@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "base"
   config.ec2setup.key_pair_name       = 'vagrant-aws'
   config.ec2setup.region              = 'ap-northeast-1'
-  config.ec2setup.private_key_path    = '~/.ssh/vagrant-aws.pem'
+  config.ec2setup.private_key_path    = "#{ENV['HOME']}/.ssh/vagrant-aws.pem"
   config.ec2setup.security_group_name = 'default'
 
   # The url from where the 'config.vm.box' box will be fetched if it

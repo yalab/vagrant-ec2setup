@@ -34,7 +34,7 @@ module VagrantPlugins
       def generate_key_pair
         key_pair_name    = @config.key_pair_name
         private_key_path = @config.private_key_path
-        @key_pair ||= if (key = region.key_pairs[key_pair_name]).exists?
+        @key_pair ||= if File.exists?(private_key_path) && (key = region.key_pairs[key_pair_name]).exists?
                         key
                       else
                         region.key_pairs.create(key_pair_name).tap{|k|
