@@ -1,5 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+$LOAD_PATH << File.expand_path('../lib', __FILE__)
+require 'vagrant/ec2_setup'
 
 Vagrant.configure("2") do |config|
   # All Vagrant configuration is done here. The most common configuration
