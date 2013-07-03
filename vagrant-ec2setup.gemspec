@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rudeboyjet@gmail.com"]
   spec.description   = "Automation setup security group, ssh key on EC2."
   spec.summary       = "This gem is a vagrant plugin for provider ec2 environment setup. SSH key or Security group for web application."
-  spec.homepage      = "https://github.com/yalab/vagrant-ec2_setup"
+  spec.homepage      = "https://github.com/yalab/vagrant-ec2setup"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
