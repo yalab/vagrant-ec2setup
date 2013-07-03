@@ -1,6 +1,6 @@
 # Vagrant::Ec2Setup
 
-TODO: Write a gem description
+Setup security group ssh key as single web applicatoin server on Amazon EC2. 
 
 ## Installation
 
@@ -18,7 +18,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Edit your Vagrantfile like this
+
+```
+Vagrant.configure("2") do |config|
+  (...)
+  config.ec2setup.key_pair_name       = 'vagrant-aws'
+  config.ec2setup.region              = 'ap-northeast-1'
+  config.ec2setup.private_key_path    = "#{ENV['HOME']}/.ssh/vagrant-aws.pem"
+  config.ec2setup.security_group_name = 'webapp'
+
+
+```
+
+Then use it
+
+```
+$ vagrant ec2setup
+```
 
 ## Contributing
 
