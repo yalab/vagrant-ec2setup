@@ -6,7 +6,7 @@ Setup security group ssh key as single web applicatoin server on Amazon EC2.
 
 Add this line to your application's Gemfile:
 
-    gem 'vagrant-ec2_setup'
+    gem 'vagrant-ec2setup'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install vagrant-ec2_setup
+    $ gem install vagrant-ec2setup
 
 ## Usage
 
